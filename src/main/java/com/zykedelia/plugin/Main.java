@@ -10,10 +10,8 @@ public class Main extends JavaPlugin {
         instance = this;
         getLogger().info("Candies started");
         getCommand("givecandy").setExecutor(new GiveCandyCommand());
-        // getCommand("giveTicket").setExecutor(new GiveTicketCommand());
 
         getServer().getPluginManager().registerEvents(new CandyListeners(), this);
-        // getServer().getPluginManager().registerEvents(new TicketListeners(), this);
     }
 
     @Override
