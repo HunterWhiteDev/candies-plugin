@@ -1,0 +1,10 @@
+name: Candies
+version: "1.0"
+main: com.zykedelia.plugin.Main
+api: "1.21"
+api-version: 1.13
+commands:
+  givecandy:
+    description: Give candies
+    usage: /givebucket <player> <candy>
+    permission: candies.give
