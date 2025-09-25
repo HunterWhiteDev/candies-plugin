@@ -1,5 +1,7 @@
 package com.zykedelia.plugin;
 
+import com.zykedelia.plugin.Candies.Candy;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandExecutor;
@@ -29,7 +31,7 @@ public class GiveCandyCommand implements CommandExecutor {
         }
 
         // Create and give candy
-        ItemStack candy = Candies.getCandy(args[1]);
+        ItemStack candy = Candies.getCandy(Candy.valueOf(args[1]));
         target.getInventory().addItem(candy);
 
         sender.sendMessage("player has been given candy");

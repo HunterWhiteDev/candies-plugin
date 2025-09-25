@@ -14,7 +14,17 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Candies {
-    public static ItemStack getCandy(String candyName) {
+
+    public enum Candy {
+        chocolatebar,
+        sourhead,
+        bubblegum,
+        kiss,
+        licorice,
+        candycorn
+    }
+
+    public static ItemStack getCandy(Candy candyName) {
 
         ItemStack candyItem = new ItemStack(Material.WHITE_DYE);
         candyItem.addUnsafeEnchantment(Enchantment.UNBREAKING, 1);
@@ -29,7 +39,7 @@ public class Candies {
         List<String> lore = Arrays.asList();
 
         switch (candyName) {
-            case "chocolatebar":
+            case chocolatebar:
                 {
                     candyMeta.setDisplayName(ChatColor.GOLD + "Chocolate Bar");
                     candyItem.setType(Material.BROWN_DYE);
@@ -51,7 +61,7 @@ public class Candies {
                             "chocolate_bar");
                     break;
                 }
-            case "sourhead":
+            case sourhead:
                 {
                     candyMeta.setDisplayName(ChatColor.GREEN + "Sour Head");
                     candyItem.setType(Material.LIME_DYE);
@@ -80,7 +90,7 @@ public class Candies {
                     candyMeta.setItemModel(new NamespacedKey(Main.getInstance(), "sour_head"));
                     break;
                 }
-            case "licorice":
+            case licorice:
                 {
                     candyMeta.setDisplayName(ChatColor.DARK_AQUA + "Licorice");
                     candyItem.setType(Material.BLACK_DYE);
@@ -109,7 +119,7 @@ public class Candies {
                     candyMeta.setItemModel(new NamespacedKey(Main.getInstance(), "licorice"));
                     break;
                 }
-            case "candycorn":
+            case candycorn:
                 {
                     candyMeta.setDisplayName(ChatColor.YELLOW + "Candy Corn");
                     candyItem.setType(Material.YELLOW_DYE);
@@ -132,7 +142,7 @@ public class Candies {
                     candyMeta.setItemModel(new NamespacedKey(Main.getInstance(), "candy_corn"));
                     break;
                 }
-            case "bubblegum":
+            case bubblegum:
                 {
                     candyMeta.setDisplayName(ChatColor.LIGHT_PURPLE + "Bubble Gum");
                     candyItem.setType(Material.ORANGE_DYE);
@@ -155,7 +165,7 @@ public class Candies {
                     candyMeta.setItemModel(new NamespacedKey(Main.getInstance(), "bubble_gum"));
                     break;
                 }
-            case "kiss":
+            case kiss:
                 {
                     candyMeta.setDisplayName(ChatColor.AQUA + "Kiss");
                     candyItem.setType(Material.WHITE_DYE);
